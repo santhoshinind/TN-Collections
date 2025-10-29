@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TNCollections — Tradition Meets Modern Elegance</title>
+  <meta name="description" content="TNCollections — Sarees, Dress Materials, Chudidars, Kids & Mens Wear. Traditional designs with modern style. Shop on WhatsApp." />
+  <link rel="icon" href="#" />
+  <style>
+    /* Simple, modern, responsive styles */
+    :root{
+      --accent:#9b3b2b; /* warm, textile-like accent */
+      --muted:#6b6b6b;
+      --bg:#fffaf8;
+      --card:#ffffff;
+      --maxw:1100px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:linear-gradient(180deg, #fffaf8 0%, #fff 100%);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#ffe9e6, #fff2f0);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:18px;box-shadow:0 6px 18px rgba(155,59,43,0.08);
+    }
+    h1.logo-title{margin:0;font-size:20px;letter-spacing:0.6px;}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+    .hero{
+      display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-top:18px;padding:28px;border-radius:var(--radius);background:linear-gradient(180deg,#fff,#fffefc);box-shadow:0 8px 32px rgba(28,20,16,0.04);
+    }
+    .hero .intro{padding:8px 6px}
+    .tag{color:var(--accent);font-weight:700;margin-bottom:6px}
+    h2{margin:6px 0 12px;font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer;text-decoration:none;
+      box-shadow:0 8px 20px rgba(27,20,16,0.06);
+    }
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;color:var(--accent);border:1px solid rgba(155,59,43,0.12)}
+    /* Products grid */
+    .section{margin-top:30px;padding:20px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(36,30,22,0.04);display:flex;flex-direction:column;gap:10px}
+    .thumb{height:220px;border-radius:10px;overflow:hidden;background:#f6f6f6;display:flex;align-items:center;justify-content:center}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .price{font-weight:700;color:var(--accent)}
+    .cat{font-size:13px;color:var(--muted)}
+    footer{margin:40px 0 18px;color:var(--muted);font-size:14px;padding:20px 0;border-top:1px solid rgba(0,0,0,0.03)}
+    /* Contact */
+    .contact{display:flex;flex-direction:column;gap:12px;padding:18px;border-radius:12px;background:#fff}
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      header{flex-direction:column;align-items:flex-start}
+      .grid{grid-template-columns:1fr}
+      .hero{padding:18px}
+      h2{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">TN</div>
+        <div>
+          <div class="tag">TNCollections</div>
+          <div class="logo-title">Where Tradition Meets Modern Elegance</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="home-heading">
+        <div class="intro">
+          <div class="tag">Handpicked · Timeless · Modern</div>
+          <h2 id="home-heading">TNCollections — Sarees · Dress Materials · Chudidars · More</h2>
+          <p class="lead">Elegant traditional wear fused with contemporary style. Curated sarees, Bollywood-inspired dresses, kids wear, and men’s collections — crafted for every occasion.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer" aria-label="Shop on WhatsApp">
+              🛍️ Shop on WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#products">Browse Collection</a>
+          </div>
+        </div>
+
+        <!-- simple hero image (SVG placeholder) -->
+        <div style="display:flex;align-items:center;justify-content:center">
+          <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TNCollections showcase">
+            <rect width="320" height="220" rx="12" fill="#fff2f0"/>
+            <g transform="translate(18,18)">
+              <rect width="160" height="120" rx="8" fill="#ffffff" stroke="#ffe6e3"/>
+              <rect x="172" y="0" width="110" height="72" rx="8" fill="#fffaf2" stroke="#ffe6e3"/>
+              <rect x="172" y="82" width="110" height="56" rx="8" fill="#fffaf2" stroke="#ffe6e3"/>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <div class="wrap" style="padding:0">
+          <h3 id="about-heading">About TNCollections</h3>
+          <p style="color:var(--muted);max-width:820px">
+            TNCollections brings together the grace of traditional Indian textiles with contemporary silhouettes.
+            From handpicked sarees and intricate dress materials to comfortable kids wear and elegant men’s pieces,
+            our collections celebrate craftsmanship and modern taste. Whether you’re shopping for a wedding, festival, or everyday elegance — explore styles that honor tradition while staying fresh and wearable.
+          </p>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section class="section" id="products" aria-labelledby="products-heading">
+        <div class="wrap" style="padding:0">
+          <h3 id="products-heading">Featured Categories</h3>
+          <div class="grid" role="list">
+            <!-- Product 1 -->
+            <article class="card" role="listitem" aria-labelledby="p1-title">
+              <div class="thumb">
+                <!-- Replace this inline SVG with your product image at images/saree1.jpg -->
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fffaf8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%239b3b2b'>Sarees</text></svg>" alt="Sarees collection">
+              </div>
+              <div>
+                <div id="p1-title" style="font-weight:700">Sarees</div>
+                <div class="cat">Handpicked silk, cotton & designer drapes</div>
+              </div>
+              <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                <div class="price">From ₹1,499</div>
+                <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer">Shop on WhatsApp</a>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="card" role="listitem" aria-labelledby="p2-title">
+              <div class="thumb">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fffaf8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%239b3b2b'>Dress Materials</text></svg>" alt="Dress materials">
+              </div>
+              <div>
+                <div id="p2-title" style="font-weight:700">Dress Materials</div>
+                <div class="cat">Unstitched fabrics — customize to your size & style</div>
+              </div>
+              <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                <div class="price">From ₹699</div>
+                <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer">Shop on WhatsApp</a>
+              </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="card" role="listitem" aria-labelledby="p3-title">
+              <div class="thumb">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fffaf8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%239b3b2b'>Bollywood Style</text></svg>" alt="Bollywood style dresses">
+              </div>
+              <div>
+                <div id="p3-title" style="font-weight:700">Bollywood-Style Dresses</div>
+                <div class="cat">Statement pieces for events and parties</div>
+              </div>
+              <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                <div class="price">From ₹2,300</div>
+                <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer">Shop on WhatsApp</a>
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="card" role="listitem" aria-labelledby="p4-title">
+              <div class="thumb">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fffaf8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%239b3b2b'>Chudidaars</text></svg>" alt="Chudidaars">
+              </div>
+              <div>
+                <div id="p4-title" style="font-weight:700">Chudidaars</div>
+                <div class="cat">Traditional fits with contemporary embroidery</div>
+              </div>
+              <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                <div class="price">From ₹999</div>
+                <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer">Shop on WhatsApp</a>
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="card" role="listitem" aria-labelledby="p5-title">
+              <div class="thumb">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fffaf8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%239b3b2b'>Mens Wear</text></svg>" alt="Mens wear">
+              </div>
+              <div>
+                <div id="p5-title" style="font-weight:700">Men’s Wear</div>
+                <div class="cat">Kurta sets, festive wear & casual staples</div>
+              </div>
+              <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                <div class="price">From ₹899</div>
+                <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer">Shop on WhatsApp</a>
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="card" role="listitem" aria-labelledby="p6-title">
+              <div class="thumb">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fffaf8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%239b3b2b'>Kids Wear</text></svg>" alt="Kids wear">
+              </div>
+              <div>
+                <div id="p6-title" style="font-weight:700">Kids Wear</div>
+                <div class="cat">Comfortable, colorful pieces for little ones</div>
+              </div>
+              <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                <div class="price">From ₹499</div>
+                <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer">Shop on WhatsApp</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact" aria-labelledby="contact-heading">
+        <div class="wrap" style="padding:0">
+          <h3 id="contact-heading">Contact & Orders</h3>
+          <div class="contact">
+            <p style="margin:0;color:var(--muted)">
+              To place an order or ask about stock and sizes, please join our WhatsApp group or message us directly. We reply quickly between 10:00–20:00.
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank" rel="noopener noreferrer">Join TNCollections on WhatsApp</a>
+              <a class="btn btn-ghost" href="#products">View Products</a>
+            </div>
+            <p style="margin:8px 0 0;color:var(--muted)">Pro tip: Share product name, color, size & delivery pincode when you message — it helps us confirm availability faster.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="wrap" style="padding:0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
+        <div>© <strong>TNCollections</strong> — Tradition & modernity handwoven together.</div>
+        <div style="color:var(--muted)">Made with care • For orders, use WhatsApp</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Minimal JS for smooth scroll -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+tncollections/
+  index.html
+  images/
+    saree-01.jpg
+    dressmaterial-01.jpg
+    bollywood-01.jpg
+    chudidar-01.jpg
+    mens-01.jpg
+    kids-01.jpg
+<img src="images/saree-01.jpg" alt="Red silk saree with zari border">
