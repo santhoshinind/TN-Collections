@@ -186,27 +186,52 @@
 <div style="height:110px;"></div>
 
 <div class="wrap">
+<!-- HERO SECTION -->
+<section class="hero" id="home" style="padding:0;">
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div>
-      <div class="tag">Handpicked · Timeless · Modern</div>
-      <h2>TNCollections — Sarees · Dress Materials · Chudidars · More</h2>
-      <p class="lead">
-        Elegant traditional wear fused with contemporary style.
-        Sarees, dress materials, kids wear, and men’s collections.
-      </p>
+  <!-- Banner Slider Container -->
+  <div class="banner-slider">
 
-      <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF" target="_blank">🛍️ Shop on WhatsApp</a>
-      <a class="btn btn-ghost" href="#products">Browse Collection</a>
-    </div>
+      <!-- Banner 1: Saree -->
+      <div class="banner-slide">
+          <img src="images/banner-saree-01.jpg.jpeg" alt="TNCollections Saree Collection" style="width:100%; height:auto; border-radius:12px;">
+      </div>
 
-    <div style="display:flex;justify-content:center;">
-      <svg width="320" height="220">
-        <rect width="320" height="220" rx="12" fill="#fff2f0"></rect>
-      </svg>
-    </div>
-  </section>
+      <!-- Banner 2: Sharara -->
+      <div class="banner-slide">
+          <img src="images/banner-sharara-01.jpg.jpeg" alt="TNCollections Latest Dress Collection" style="width:100%; height:auto; border-radius:12px;">
+      </div>
+
+  </div>
+
+</section>
+
+<style>
+/* Simple Fade Banner Slider */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: fadeSlide 10s infinite;
+}
+
+.banner-slide:nth-child(1) { animation-delay: 0s; }
+.banner-slide:nth-child(2) { animation-delay: 5s; }
+
+@keyframes fadeSlide {
+  0% { opacity:0; }
+  10% { opacity:1; }
+  40% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:0; }
+}
+</style>
 
   <!-- ABOUT -->
   <section id="about" class="section">
