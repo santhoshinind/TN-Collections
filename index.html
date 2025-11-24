@@ -208,18 +208,29 @@
 </section>
 
 <style>
-/* Simple Fade Banner Slider */
+/* Fixed, Clean Banner Slider */
 .banner-slider {
   position: relative;
   width: 100%;
+  height: 380px; /* Adjust between 320–450px if needed */
   overflow: hidden;
 }
 
 .banner-slide {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   opacity: 0;
   animation: fadeSlide 10s infinite;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .banner-slide:nth-child(1) { animation-delay: 0s; }
