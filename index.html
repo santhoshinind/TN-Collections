@@ -367,9 +367,32 @@
 </footer>
 
 <script>
-document.getElementById("menu-toggle").addEventListener("click", function() {
-  document.getElementById("menu").classList.toggle("active");
-});
+let currentSlide = 0;
+const slider = document.getElementById("bannerSlider");
+const slides = document.querySelectorAll(".banner-slide");
+const totalSlides = slides.length;
+
+function updateSlide() {
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Manual Left
+document.getElementById("slideLeft").onclick = () => {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlide();
+};
+
+// Manual Right
+document.getElementById("slideRight").onclick = () => {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlide();
+};
+
+// Auto Slide every 5 seconds
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlide();
+}, 5000);
 </script>
 
 </body>
