@@ -217,13 +217,20 @@
 
 <style>
 /* --- Banner Slider (Option E: Manual + Auto-Slide) --- */
-
 .banner-slider {
   position: relative;
   width: 100%;
-  height: 420px; /* adjust if needed */
+  height: 420px;
   overflow: hidden;
   border-radius: 14px;
+}
+
+/* Track that moves */
+.slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
 }
 
 .banner-slide {
@@ -235,17 +242,11 @@
 .banner-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* full image, no cropping */
+  object-fit: cover;
   border-radius: 14px;
 }
 
-/* SLIDER TRACK */
-#bannerSlider {
-  display: flex;
-  transition: transform 0.7s ease-in-out;
-}
-
-/* ARROWS */
+/* Arrows */
 .slide-btn {
   position: absolute;
   top: 50%;
@@ -261,21 +262,13 @@
   z-index: 10;
 }
 
-.slide-btn:hover {
-  background: rgba(255,255,255,0.9);
-}
-
 .slide-btn.left { left: 15px; }
 .slide-btn.right { right: 15px; }
 
-/* Mobile Fix */
 @media (max-width: 640px) {
   .banner-slider { height: 260px; }
-  .slide-btn {
-    font-size: 22px;
-    padding: 6px 10px;
-  }
 }
+
 </style>
 
   <!-- ABOUT -->
