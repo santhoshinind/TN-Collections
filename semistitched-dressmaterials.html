@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Semi-Stitched Dress Materials – TNCollections</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: #fffaf8;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 25px;
+    }
+
+    header {
+      background: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #9b3b2b;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .thumb {
+      height: 240px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .price {
+      color: #9b3b2b;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: #9b3b2b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    @media(max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>Semi-Stitched Dress Materials</h2>
+  <a href="index.html" style="text-decoration:none; font-weight:600; color:#9b3b2b;">← Back to Home</a>
+</header>
+
+<div class="wrap">
+
+  <p style="color:#6b6b6b; max-width:800px;">
+    Discover beautiful <strong>Semi-Stitched Dress Materials</strong> perfect for casual, festive, and party wear.  
+    Easy to stitch and fits all sizes comfortably.
+  </p>
+
+  <div class="grid">
+
+    <!-- PRODUCT SAMPLE — Add more later -->
+    <div class="card">
+      <div class="thumb">
+        <img src="images/dressmaterials-01.jpeg">
+      </div>
+      <h3>Semi-Stitched Dress Material</h3>
+      <p class="price">From ₹999</p>
+      <a class="btn" href="https://wa.me/916374508661">Order on WhatsApp</a>
+    </div>
+
+    <!-- Duplicate this card when you add more products -->
+
+  </div>
+
+</div>
+
+</body>
+</html>
