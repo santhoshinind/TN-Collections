@@ -1,1 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Western Couple Sets – TNCollections</title>
+
+  <style>
+    :root {
+      --accent:#9b3b2b;
+      --muted:#6b6b6b;
+      --card:#ffffff;
+      --maxw:1100px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+    }
+
+    body {
+      margin:0;
+      background:#fffaf8;
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* HEADER */
+    header {
+      background:#fff;
+      padding:15px 28px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    header a {
+      text-decoration:none;
+      color:var(--accent);
+      font-weight:600;
+      font-size:1.1rem;
+    }
+
+    .wrap {
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:28px;
+    }
+
+    h2 {
+      margin-top:0;
+      color:#5b2c6f;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    @media(max-width:900px) {
+      .grid { grid-template-columns:repeat(2,1fr); }
+    }
+
+    @media(max-width:600px) {
+      .grid { grid-template-columns:1fr; }
+    }
+
+    .card {
+      background:var(--card);
+      padding:14px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(36,30,22,0.05);
+    }
+
+    .thumb {
+      height:230px;
+      overflow:hidden;
+      border-radius:10px;
+    }
+
+    .thumb img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .price {
+      color:var(--accent);
+      font-weight:700;
+      margin:6px 0;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:10px 14px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:600;
+      text-align:center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<div class="wrap">
+  <h2>Western Couple Sets</h2>
+  <p style="color:var(--muted); max-width:800px;">
+    Stylish western outfits for modern couples — perfect for parties, pre-wedding shoots,
+    outings and celebrations.
+  </p>
+
+  <div class="grid">
+
+    <!-- PRODUCT 1 -->
+    <div class="card">
+      <div class="thumb">
+        <img src="images/couple-sets-01.jpeg">
+      </div>
+      <h3>Matching Western Outfit Set</h3>
+      <div class="price">From ₹1,899</div>
+      <p style="color:var(--muted); font-size:14px;">
+        Trendy matching western wear for stylish couples.
+      </p>
+      <a class="btn" href="#">Enquire on WhatsApp</a>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="card">
+      <div class="thumb">
+        <img src="images/couple-sets-01.jpeg">
+      </div>
+      <h3>Premium Western Couple Combo</h3>
+      <div class="price">From ₹2,299</div>
+      <p style="color:var(--muted); font-size:14px;">
+        Coordinated partywear outfits with premium fabrics.
+      </p>
+      <a class="btn" href="#">Enquire on WhatsApp</a>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+      <div class="thumb">
+        <img src="images/couple-sets-01.jpeg">
+      </div>
+      <h3>Modern Western Matching Set</h3>
+      <div class="price">From ₹2,799</div>
+      <p style="color:var(--muted); font-size:14px;">
+        Perfect for pre-wedding photoshoots & special occasions.
+      </p>
+      <a class="btn" href="#">Enquire on WhatsApp</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
 
