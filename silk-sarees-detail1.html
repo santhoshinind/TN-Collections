@@ -51,12 +51,19 @@
   }
 
   /* FIXED IMAGE — NO SHRINKING */
-  .product-image img {
+  .product-image {
     width:100%;
-    height:auto;          /* ← FIXED */
-    object-fit:contain;   /* ← FIXED */
     border-radius:12px;
-  }
+    overflow:hidden;
+}
+
+.product-image img {
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
 
   h2 {
     margin:0 0 10px;
