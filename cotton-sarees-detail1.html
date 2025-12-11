@@ -38,6 +38,7 @@
     z-index:1000;
   }
 
+  /* MAIN PRODUCT BOX */
   .product-container {
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -49,16 +50,18 @@
     box-shadow:0 6px 24px rgba(0,0,0,0.06);
   }
 
+  /* FIXED IMAGE DISPLAY */
   .product-image {
-    width:100%;
-    border-radius:12px;
-    overflow:hidden;
+      width:100%;
+      border-radius:12px;
+      overflow:hidden;
   }
 
   .product-image img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      display:block;
   }
 
   h2 {
@@ -115,35 +118,39 @@
 
 <header>
   <h1 style="color:#5b2c6f; margin:0;">TNCollections</h1>
-  <a href="index.html" style="color:#5b2c6f; text-decoration:none; font-weight:600;">← Back</a>
+
+  <!-- BACK BUTTON -->
+  <a href="cotton-sarees.html" 
+     style="color:#5b2c6f; text-decoration:none; font-weight:600;">
+     ← Back
+  </a>
 </header>
 
 <div class="wrap">
 
   <div class="product-container">
 
-    <!-- LEFT: big image -->
+    <!-- LEFT IMAGE -->
     <div class="product-image">
-      <img src="images/saree-01.jpeg" alt="Cotton Saree">
+      <img src="images/cotton-saree-01.jpeg" alt="Cotton Saree">
     </div>
 
-    <!-- RIGHT: product details -->
+    <!-- RIGHT DETAILS -->
     <div>
       <h2>Premium Cotton Sarees</h2>
-      <div class="price">Starting from ₹999</div>
+      <div class="price">Starting from ₹899</div>
 
       <p>
-        Our cotton sarees are known for their lightweight fabric, breathable texture,
-        and everyday comfort. Suitable for office, regular wear, and festive occasions.
-        Available in attractive prints, soft cotton, mulmul, and handloom varieties.
+        Our Cotton Sarees are lightweight, breathable and designed for all-day comfort. 
+        Made from soft, skin-friendly fabric with traditional prints and daily-wear patterns.
       </p>
 
       <div class="section-title">Available Colors</div>
       <div class="color-boxes">
-        <div class="color-box" style="background:#e6b800;"></div>
-        <div class="color-box" style="background:#0066cc;"></div>
-        <div class="color-box" style="background:#ff6666;"></div>
-        <div class="color-box" style="background:#4b0082;"></div>
+        <div class="color-box" style="background:#e57373;"></div>
+        <div class="color-box" style="background:#4fc3f7;"></div>
+        <div class="color-box" style="background:#81c784;"></div>
+        <div class="color-box" style="background:#fdd835;"></div>
       </div>
 
       <a class="btn-primary" 
