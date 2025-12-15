@@ -3,108 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Soft Cotton Sarees – TNCollections</title>
+<title>Soft Cotton Saree – TNCollections</title>
 
 <style>
-  :root {
+  :root{
     --accent:#9b3b2b;
-    --muted:#6b6b6b;
     --bg:#fffaf8;
-    --card:#ffffff;
     --radius:14px;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto;
   }
 
-  body {
-    margin:0;
-    background:var(--bg);
-  }
+  body{ margin:0; background:var(--bg); }
 
-  .wrap {
-    max-width:1100px;
-    margin:0 auto;
-    padding:28px;
-  }
-
-  header {
+  header{
+    position:fixed; top:0; left:0; right:0;
     background:#fff;
-    position:fixed;
-    top:0; left:0; right:0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:12px 28px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    display:flex; justify-content:space-between; align-items:center;
+    padding:12px 30px;
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
     z-index:1000;
   }
 
-  /* PRODUCT GRID */
-  .product-container {
+  .wrap{ max-width:1100px; margin:0 auto; padding:30px; }
+  .spacer{ height:120px; }
+
+  .product{
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:30px;
-    margin-top:140px;
-    background:#fff;
-    padding:28px;
-    border-radius:var(--radius);
-    box-shadow:0 6px 24px rgba(0,0,0,0.06);
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
   }
 
-  /* FIXED IMAGE — NO SHRINKING */
-  .product-image img {
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      display:block;
-      border-radius:12px;
+  .product img{
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    display:block;
   }
 
-  h2 {
-    margin:0 0 10px;
-    color:#5b2c6f;
-  }
+  h2{ margin-top:0; color:#5b2c6f; }
+  .price{ color:var(--accent); font-size:22px; font-weight:700; }
 
-  .price {
-    color:var(--accent);
-    font-size:22px;
-    font-weight:700;
-    margin:8px 0 18px;
-  }
-
-  .section-title {
-    margin-top:20px;
-    font-weight:600;
-    color:#444;
-  }
-
-  .color-boxes {
-    display:flex;
-    gap:10px;
-    margin:10px 0 20px;
-  }
-
-  .color-box {
-    width:30px;
-    height:30px;
-    border-radius:6px;
+  .colors{ display:flex; gap:10px; margin:12px 0; }
+  .color{
+    width:28px; height:28px; border-radius:6px;
     border:1px solid #ddd;
   }
 
-  .btn-primary {
+  .btn{
+    display:inline-block;
+    margin-top:18px;
     background:var(--accent);
     color:#fff;
-    padding:14px 20px;
+    padding:14px 22px;
     border-radius:10px;
     text-decoration:none;
     font-weight:700;
-    display:inline-block;
-    margin-top:15px;
   }
 
-  @media(max-width:768px) {
-    .product-container {
-      grid-template-columns:1fr;
-    }
+  @media(max-width:768px){
+    .product{ grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -112,45 +73,37 @@
 <body>
 
 <header>
-  <h1 style="color:#5b2c6f; margin:0;">TNCollections</h1>
-
-  <!-- Back to cotton-sarees.html -->
-  <a href="cotton-sarees.html" 
-     style="color:#5b2c6f; text-decoration:none; font-weight:600;">
-     ← Back
-  </a>
+  <strong style="color:#5b2c6f;">TNCollections</strong>
+  <a href="cotton-sarees.html" style="text-decoration:none; color:#5b2c6f;">← Back</a>
 </header>
+
+<div class="spacer"></div>
 
 <div class="wrap">
 
-  <div class="product-container">
+  <div class="product">
 
-    <!-- IMAGE -->
-    <div class="product-image">
-      <img src="images/saree-01.jpeg" alt="Soft Cotton Saree">
-    </div>
+    <img src="images/saree-01.jpeg" alt="Soft Cotton Saree">
 
-    <!-- DETAILS -->
     <div>
-      <h2>Soft Cotton Sarees</h2>
-      <div class="price">Starting from ₹999</div>
+      <h2>Soft Cotton Saree</h2>
+      <div class="price">Starting from ₹1,499</div>
 
       <p>
-        These soft cotton sarees are extremely comfortable, lightweight,  
-        and perfect for both daily wear and casual outings.  
-        Made with premium breathable cotton that drapes beautifully.
+        Lightweight soft cotton sarees ideal for daily wear, office use,
+        and summer comfort. Breathable fabric with elegant prints.
       </p>
 
-      <div class="section-title">Available Colors</div>
-      <div class="color-boxes">
-        <div class="color-box" style="background:#e57373;"></div>
-        <div class="color-box" style="background:#64b5f6;"></div>
-        <div class="color-box" style="background:#81c784;"></div>
-        <div class="color-box" style="background:#fff176;"></div>
+      <strong>Available Colors</strong>
+      <div class="colors">
+        <div class="color" style="background:#c0392b;"></div>
+        <div class="color" style="background:#1f618d;"></div>
+        <div class="color" style="background:#7d6608;"></div>
+        <div class="color" style="background:#6c3483;"></div>
       </div>
 
-      <a class="btn-primary" 
-         href="https://wa.me/916380795488?text=I%20want%20to%20order%20Soft%20Cotton%20Sarees">
+      <a class="btn"
+         href="https://wa.me/916380795488?text=I%20want%20to%20order%20Soft%20Cotton%20Saree">
         🛍️ Order on WhatsApp
       </a>
     </div>
