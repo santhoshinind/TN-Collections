@@ -1,123 +1,107 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bollywood Style – Light Collection | TNCollections</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bollywood Light Dress Materials – TNCollections</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      background: #fffaf8;
-    }
+<style>
+  body {
+    margin:0;
+    font-family: Inter, system-ui, sans-serif;
+    background:#fffaf8;
+  }
 
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 25px;
-    }
+  header {
+    background:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+  }
 
-    header {
-      background: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+  .wrap {
+    max-width:1100px;
+    margin:0 auto;
+    padding:25px;
+  }
 
-    h2 {
-      margin-top: 20px;
-      color: #9b3b2b;
-    }
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:25px;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 20px;
-    }
+  .card {
+    background:#fff;
+    border-radius:12px;
+    padding:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.05);
+  }
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 12px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    }
+  .thumb {
+    height:240px;
+    overflow:hidden;
+    border-radius:10px;
+  }
 
-    .thumb {
-      height: 240px;
-      overflow: hidden;
-      border-radius: 10px;
-    }
+  .thumb img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
 
-    .thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  h4 { margin:12px 0 5px; }
 
-    .price {
-      color: #9b3b2b;
-      font-weight: 700;
-      margin-top: 8px;
-    }
+  .price {
+    color:#9b3b2b;
+    font-weight:700;
+  }
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 14px;
-      background: #9b3b2b;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: 600;
-    }
+  @media(max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+  }
 
-    @media(max-width: 900px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media(max-width: 600px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  @media(max-width:600px){
+    .grid{grid-template-columns:1fr;}
+  }
+</style>
 </head>
 
 <body>
 
 <header>
-  <h2>Bollywood Style – Light Collection</h2>
-  <a href="index.html" style="text-decoration:none; font-weight:600; color:#9b3b2b;">← Back to Home</a>
+  <h2 style="margin:0;color:#9b3b2b;">Bollywood Light</h2>
+  <a href="index.html" style="text-decoration:none;font-weight:600;color:#9b3b2b;">← Back to Home</a>
 </header>
 
 <div class="wrap">
 
-  <p style="color:#6b6b6b; max-width:800px;">
-    Discover elegant and budget-friendly <strong>Light Bollywood Style</strong> outfits perfect for casual functions,
-    festivals, and special occasions.
+  <p style="color:#6b6b6b;">
+    Premium <strong>Bollywood Light Dress Materials</strong> with rich embroidery and designer patterns.
   </p>
 
   <div class="grid">
 
-    <!-- PRODUCT SAMPLE -->
-    <div class="card">
-      <div class="thumb">
-        <img src="images/bollywood-01.jpg">
-      </div>
-      <h3>Light Bollywood Style Outfit</h3>
-      <p class="price">From ₹999</p>
-      <a class="btn" href="https://wa.me/916374508661">Order on WhatsApp</a>
-    </div>
+    <!-- PRODUCT CARD -->
+    <article class="card">
+      <a href="bollywood-light-detail.html"
+         style="text-decoration:none;color:inherit;display:block;">
+
+        <div class="thumb">
+          <img src="images/bollywood-01.jpg" alt="Bollywood Light Dress Material">
+        </div>
+
+        <h4>Bollywood Light Dress Material</h4>
+        <p class="price">Starting from ₹2,499</p>
+
+      </a>
+    </article>
 
   </div>
 
