@@ -1,54 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Men's Traditional Wear — TNCollections</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Men’s Traditional Wear – TNCollections</title>
 
   <style>
-    :root {
-      --accent:#9b3b2b;
-      --muted:#6b6b6b;
-      --maxw:1100px;
-      --radius:14px;
-      font-family: Inter, system-ui;
-    }
-
     body {
       margin:0;
+      font-family: Inter, system-ui, sans-serif;
       background:#fffaf8;
-      color:#222;
-    }
-
-    .wrap {
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:25px;
     }
 
     header {
       background:#fff;
-      position:fixed;
-      top:0; left:0; right:0;
+      padding:15px 30px;
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      padding:10px 40px;
+      align-items:center;
       box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      position:sticky;
+      top:0;
       z-index:1000;
     }
 
-    nav a {
-      text-decoration:none;
-      color:#5b2c6f;
-      font-weight:600;
-      margin-left:20px;
-    }
-
-    h2 {
-      margin-top:140px;
-      font-size:28px;
-      color:#5b2c6f;
+    .wrap {
+      max-width:1100px;
+      margin:0 auto;
+      padding:25px;
     }
 
     .grid {
@@ -58,47 +37,45 @@
       margin-top:20px;
     }
 
-    @media(max-width:900px){
-      .grid { grid-template-columns:repeat(2,1fr); }
-    }
-
-    @media(max-width:600px){
-      .grid { grid-template-columns:1fr; }
-    }
-
     .card {
       background:#fff;
       border-radius:12px;
+      padding:12px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.05);
+      transition:transform .2s;
+    }
+
+    .card:hover {
+      transform:translateY(-4px);
+    }
+
+    .thumb {
+      height:240px;
       overflow:hidden;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      padding-bottom:15px;
+      border-radius:10px;
     }
 
     .thumb img {
       width:100%;
-      height:250px;
+      height:100%;
       object-fit:cover;
     }
 
-    .info {
-      padding:10px 15px;
-    }
+    h4 { margin:10px 0 4px; }
+    .price { color:#9b3b2b; font-weight:700; }
 
-    .price {
-      color:var(--accent);
-      font-weight:700;
-      margin:8px 0;
-    }
-
-    .btn {
-      background:var(--accent);
-      padding:10px 14px;
-      color:#fff;
-      border-radius:10px;
+    a.card-link {
       text-decoration:none;
-      font-weight:700;
-      display:inline-block;
-      margin-top:5px;
+      color:inherit;
+      display:block;
+    }
+
+    @media(max-width:900px){
+      .grid{ grid-template-columns:repeat(2,1fr); }
+    }
+
+    @media(max-width:600px){
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -106,67 +83,34 @@
 <body>
 
 <header>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="images/logo.png" style="height:60px;border-radius:10px;">
-    <div>
-      <h1 style="margin:0;font-size:1.5em;color:#5b2c6f;">TNCollections</h1>
-      <p style="margin:0;font-size:0.85em;color:#7b7b7b;">Where Tradition Meets Modern Elegance</p>
-    </div>
-  </div>
-
-  <nav>
-    <a href="index.html#products">Products</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+  <h2 style="margin:0;color:#5b2c6f;">Men’s Traditional Wear</h2>
+  <a href="index.html"
+     style="text-decoration:none;font-weight:600;color:#9b3b2b;">
+     ← Home
+  </a>
 </header>
 
 <div class="wrap">
 
-  <h2>Men's Traditional Wear</h2>
-  <p style="color:#666;max-width:700px;">
-    Explore our curated traditional men's wear collection including dhotis, kurtas, festive wear and ethnic sets.
+  <p style="color:#6b6b6b;">
+    Traditional men’s wear including kurtas, ethnic sets, and festive collections.
   </p>
 
   <div class="grid">
 
-    <!-- SAMPLE PRODUCT 1 -->
-    <div class="card">
-      <div class="thumb">
-        <img src="images/menswear-01.jpg">
-      </div>
-      <div class="info">
-        <strong>Kurta & Pajama Set</strong>
-        <div class="price">From ₹899</div>
-        <a class="btn" href="https://wa.me/919000000000">Order on WhatsApp</a>
-      </div>
-    </div>
-
-    <!-- SAMPLE PRODUCT 2 -->
-    <div class="card">
-      <div class="thumb">
-        <img src="images/menswear-01.jpg">
-      </div>
-      <div class="info">
-        <strong>Traditional Dhotis</strong>
-        <div class="price">From ₹499</div>
-        <a class="btn" href="https://wa.me/919000000000">Order on WhatsApp</a>
-      </div>
-    </div>
-
-    <!-- SAMPLE PRODUCT 3 -->
-    <div class="card">
-      <div class="thumb">
-        <img src="images/menswear-01.jpg">
-      </div>
-      <div class="info">
-        <strong>Festive Ethnic Set</strong>
-        <div class="price">From ₹1299</div>
-        <a class="btn" href="https://wa.me/919000000000">Order on WhatsApp</a>
-      </div>
-    </div>
+    <!-- PRODUCT CARD -->
+    <a href="mens-traditional-detail.html" class="card-link">
+      <article class="card">
+        <div class="thumb">
+          <img src="images/menswear-01.jpg" alt="Men’s Traditional Wear">
+        </div>
+        <h4>Men’s Traditional Wear</h4>
+        <p class="price">Starting from ₹1,199</p>
+      </article>
+    </a>
 
   </div>
+
 </div>
 
 </body>
