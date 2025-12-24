@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cotton Tops – TNCollections</title>
+
+<style>
+:root{
+  --accent:#9b3b2b;--bg:#fffaf8;--radius:14px;
+  font-family:Inter,system-ui
+}
+
+body{margin:0;background:var(--bg)}
+
+header{
+  background:#fff;position:fixed;top:0;left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 28px;box-shadow:0 2px 6px rgba(0,0,0,.1)
+}
+
+.wrap{max-width:1100px;margin:auto;padding:28px}
+
+.product-container{
+  margin-top:130px;background:#fff;padding:28px;
+  border-radius:var(--radius);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:30px;box-shadow:0 6px 24px rgba(0,0,0,.06)
+}
+
+.product-image img{width:100%;height:auto;border-radius:12px}
+
+.price{color:var(--accent);font-size:22px;font-weight:700}
+
+.color-boxes{display:flex;gap:10px;margin:10px 0}
+.color-box{width:30px;height:30px;border-radius:6px;border:1px solid #ddd}
+
+.btn{
+  background:var(--accent);color:#fff;
+  padding:14px 20px;border-radius:10px;
+  text-decoration:none;font-weight:700;display:inline-block
+}
+
+@media(max-width:768px){
+  .product-container{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2 style="color:#5b2c6f;margin:0;">TNCollections</h2>
+  <a href="tops-cotton.html" style="text-decoration:none;font-weight:600;color:#5b2c6f;">← Back</a>
+</header>
+
+<div class="wrap">
+
+<div class="product-container">
+
+<div class="product-image">
+  <img src="images/Tops-01.jpeg" alt="Cotton Tops">
+</div>
+
+<div>
+  <h2>Cotton Tops</h2>
+  <div class="price">Starting from ₹500</div>
+
+  <p>
+    Premium quality cotton tops designed for office and everyday comfort.
+    Breathable fabric, elegant cuts, and easy maintenance.
+  </p>
+
+  <strong>Available Colors</strong>
+  <div class="color-boxes">
+    <div class="color-box" style="background:#ffffff"></div>
+    <div class="color-box" style="background:#f2c94c"></div>
+    <div class="color-box" style="background:#2f80ed"></div>
+    <div class="color-box" style="background:#6fcf97"></div>
+  </div>
+
+  <a class="btn"
+     href="https://wa.me/916380795488?text=I%20want%20to%20order%20Cotton%20Tops">
+     🛍️ Order on WhatsApp
+  </a>
+</div>
+
+</div>
+</div>
+</body>
+</html>
