@@ -1,32 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Regular Readymade Sarees – TNCollections</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regular Readymade Sarees – TNCollections</title>
 
-  <style>
-    :root {
-      --accent:#9b3b2b;
-      --muted:#6b6b6b;
-      --card:#ffffff;
-      --maxw:1100px;
-      --radius:14px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
-    }
+<style>
+body{margin:0;font-family:Inter,system-ui;background:#fffaf8}
+.wrap{max-width:1100px;margin:auto;padding:25px}
 
-    body {
-      margin:0;
-      background:#fffaf8;
-      color:#222;
-      -webkit-font-smoothing:antialiased;
-    }
+header{
+  background:#fff;position:sticky;top:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 30px;box-shadow:0 2px 6px rgba(0,0,0,.1)
+}
 
-    header {
-      background:#fff;
-      padding:15px 28px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.1);
-      position:sticky;
-      top:0;
-      z-index:1000
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;margin-top:20px
+}
 
+.card{
+  background:#fff;border-radius:12px;padding:12px;
+  box-shadow:0 4px 14px rgba(0,0,0,.05)
+}
+
+.thumb{height:240px;overflow:hidden;border-radius:10px}
+.thumb img{width:100%;height:100%;object-fit:cover}
+
+.price{color:#9b3b2b;font-weight:700;margin-top:6px}
+
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2 style="color:#9b3b2b;margin:0;">Regular Readymade Sarees</h2>
+  <a href="index.html"
+     style="text-decoration:none;font-weight:600;color:#9b3b2b;">
+     ← Home
+  </a>
+</header>
+
+<div class="wrap">
+
+<p style="color:#6b6b6b">
+Comfortable and elegant <strong>Regular Readymade Sarees</strong> suitable for daily and office wear.
+</p>
+
+<div class="grid">
+
+<article class="card">
+  <a href="readymade-sarees-regular-detail.html"
+     style="text-decoration:none;color:inherit">
+    <div class="thumb">
+      <img src="images/readymade-sarees-01.jpeg" alt="Regular Readymade Sarees">
+    </div>
+    <h4>Regular Readymade Sarees</h4>
+    <p class="price">Starting from ₹1,799</p>
+  </a>
+</article>
+
+</div>
+</div>
+
+</body>
+</html>
