@@ -1,672 +1,319 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>TANA Fashions — Tradition Meets Modern Elegance</title>
-  <meta name="description" content="TANA Fashions — Sarees, Dress Materials, Chudidars, Kids & Mens Wear. Traditional designs with modern style. Shop on WhatsApp." />
+  <meta name="description"
+    content="TANA Fashions — Sarees, Dress Materials, Chudidars, Kids & Mens Wear. Traditional designs with modern style." />
 
   <style>
     :root {
-      --accent:#9b3b2b;
-      --muted:#6b6b6b;
-      --bg:#fffaf8;
-      --card:#ffffff;
-      --maxw:1100px;
-      --radius:14px;
+      --accent: #9b3b2b;
+      --muted: #6b6b6b;
+      --bg: #fffaf8;
+      --card: #ffffff;
+      --maxw: 1100px;
+      --radius: 14px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
     }
 
     body {
-      margin:0;
-      background:linear-gradient(180deg,#fffaf8 0%,#fff 100%);
-      color:#222;
-      -webkit-font-smoothing:antialiased;
+      margin: 0;
+      background: linear-gradient(180deg, #fffaf8 0%, #fff 100%);
+      color: #222;
     }
 
     .wrap {
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:28px;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px;
     }
 
     /* HEADER */
     header {
-      background:#fff;
-      position:fixed;
-      top:0; left:0; right:0;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:10px 40px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.1);
-      z-index:2000;
+      background: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      z-index: 2000;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
     }
 
     nav a {
-      text-decoration:none;
-      color:#5b2c6f;
-      font-weight:600;
-      font-size:1rem;
+      text-decoration: none;
+      color: #5b2c6f;
+      font-weight: 600;
     }
 
-    nav { display:flex; gap:25px; }
-
     #menu-toggle {
-      display:none;
-      background:none;
-      border:none;
-      font-size:30px;
-      color:#5b2c6f;
-      cursor:pointer;
-      z-index:3000;
+      display: none;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #5b2c6f;
     }
 
     /* HERO */
     .hero {
-      display:grid;
-      grid-template-columns:1fr;
-      gap:18px;
-      margin-top:40px;
-      padding:28px;
-      border-radius:var(--radius);
-      background:#fffefc;
-      box-shadow:0 8px 32px rgba(28,20,16,0.04);
+      margin-top: 40px;
+      background: #fffefc;
+      border-radius: var(--radius);
+      overflow: hidden;
     }
 
-    h2 { font-size:28px; margin:6px 0 12px; }
-    p.lead { color:var(--muted); margin-bottom:18px; }
-    .tag { color:var(--accent); font-weight:700; margin-bottom:6px; }
-
-    .btn {
-      display:inline-flex;
-      align-items:center;
-      padding:12px 16px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow:0 8px 20px rgba(27,20,16,0.06);
+    /* BANNER SLIDER */
+    .banner-slider {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
     }
 
-    .btn-primary { background:var(--accent); color:#fff; }
-    .btn-ghost { border:1px solid rgba(155,59,43,0.2); color:var(--accent); }
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .banner-slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .banner-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      font-size: 28px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slide-btn.left {
+      left: 15px;
+    }
+
+    .slide-btn.right {
+      right: 15px;
+    }
 
     /* GRID */
     .grid {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
     .card {
-      background:#fff;
-      border-radius:12px;
-      padding:12px;
-      display:flex;
-      flex-direction:column;
-      gap:5px;
-      box-shadow:0 6px 18px rgba(36,30,22,0.04);
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
     }
 
     .thumb {
-      height:220px;
-      border-radius:10px;
-      overflow:hidden;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 10px;
     }
 
     .thumb img {
-      width:100%;
-      height:100%;
-      object-fit:cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .price { color:var(--accent); font-weight:700; }
-    .cat { color:var(--muted); font-size:13px; }
+    .price {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .btn {
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
 
     footer {
-      color:var(--muted);
-      margin-top:40px;
-      font-size:14px;
-      padding:20px 0;
-      border-top:1px solid rgba(0,0,0,0.05);
+      margin-top: 40px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      color: var(--muted);
+      font-size: 14px;
     }
 
     /* RESPONSIVE */
-    @media(max-width:900px) {
-      .grid { grid-template-columns:repeat(2,1fr); }
-    }
-
-    @media(max-width:768px) {
-      nav { display:none; }
-
-      #menu-toggle { display:block; }
-
-      #menu.active {
-        display:flex;
-        flex-direction:column;
-        position:absolute;
-        top:110px;
-        left:0;
-        width:100%;
-        background:#fff;
-        padding:15px 0;
-        box-shadow:0 4px 8px rgba(0,0,0,0.1);
-        gap:15px;
-        text-align:center;
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media(max-width:640px) {
-      .hero { padding:18px; }
-      h2 { font-size:22px; }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        padding: 15px 0;
+        gap: 15px;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .banner-slider {
+        height: 260px;
+      }
     }
   </style>
-<header>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="images/logo1.png" alt="TANA Fashions Logo" style="height:80px;">
+</head>
 
-    <div>
-      <h1 style="margin:0;font-size:1.8em;color:#5b2c6f;">TANA Fashions</h1>
-      <p style="margin:0;font-size:0.9em;color:#7b7b7b;">
-        Where Tradition Meets Modern Elegance
-      </p>
-    </div>
-  </div>
+<body>
 
-  <nav id="menu">
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="custom-design.html">Custom Design</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <button id="menu-toggle" onclick="toggleMenu()">☰</button>
-</header>
-
-<div style="height:110px;"></div>
-<div class="wrap">
-
-<!-- HERO SECTION -->
-<section class="hero" id="home" style="padding:0;">
-
-  <!-- Banner Slider Container -->
-  <div class="banner-slider">
-
-      <!-- MOVING TRACK -->
-      <div class="slider-track" id="bannerSlider">
-
-          <!-- Banner 1 -->
-          <div class="banner-slide">
-              <img src="images/banner-saree-01.jpg.jpeg" alt="Saree Collection">
-          </div>
-
-          <!-- Banner 2 -->
-          <div class="banner-slide">
-              <img src="images/banner-sharara-01.jpg.jpeg" alt="Sharara Collection">
-          </div>
-
-      </div>
-
-      <!-- SLIDER ARROWS -->
-      <button class="slide-btn left" id="slideLeft">❮</button>
-      <button class="slide-btn right" id="slideRight">❯</button>
-
-  </div>
-
-</section>
-
-<style>
-/* --- Banner Slider (Option E: Manual + Auto-Slide) --- */
-.banner-slider {
-  position: relative;
-  width: 100%;
-  height: 420px;
-  overflow: hidden;
-  border-radius: 14px;
-}
-
-/* Track that moves */
-.slider-track {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s ease-in-out;
-}
-
-.banner-slide {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-}
-
-.banner-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-/* Arrows */
-.slide-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.7);
-  border: none;
-  padding: 10px 16px;
-  font-size: 28px;
-  cursor: pointer;
-  border-radius: 50%;
-  color: #5b2c6f;
-  font-weight: bold;
-  z-index: 10;
-}
-
-.slide-btn.left { left: 15px; }
-.slide-btn.right { right: 15px; }
-
-@media (max-width: 640px) {
-  .banner-slider { height: 260px; }
-}
-
-</style>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h3>About TANA Fashions</h3>
-    <p style="color:var(--muted);max-width:820px;">
-      TANA Fashions works directly with trusted manufacturers to bring you high-quality sarees, dress materials, chudidaars, men’s wear and kids wear at genuine wholesale-level prices.
-  By eliminating middlemen, we ensure that you receive premium designs at the most affordable rates.
-  Our mission is to blend the elegance of traditional Indian textiles with modern styles, offering handpicked collections that suit every occasion — from everyday wear to celebrations.
-    </p>
-  </section>
-
-<!-- PRODUCTS -->
-<section id="products" class="section">
-  <h3>Featured Categories</h3>
-
-  <div class="grid">
-
-    <!-- SAREES -->
-    <article class="card">
-      <div class="thumb"><img src="images/saree-02.jpeg"></div>
-
+  <!-- HEADER -->
+  <header>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <img src="images/logo1.png" alt="TANA Fashions Logo" style="height:70px;">
       <div>
-        <strong>Sarees</strong>
-        <div class="cat">Silk, Cotton & Designer Drapes</div>
+        <h1 style="margin:0;color:#5b2c6f;">TANA Fashions</h1>
+        <p style="margin:0;font-size:0.9em;color:#777;">Where Tradition Meets Modern Elegance</p>
+      </div>
+    </div>
 
-        <div style="margin-top:8px; display:flex; gap:8px;">
-          <a href="silk-sarees.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Silk</a>
-          <a href="cotton-sarees.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Cotton</a>
+    <nav id="menu">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="custom-design.html">Custom Design</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <div style="height:100px;"></div>
+
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="banner-slider">
+        <div class="slider-track" id="bannerSlider">
+          <div class="banner-slide">
+            <img src="images/banner-saree-01.jpg.jpeg" alt="Sarees">
+          </div>
+          <div class="banner-slide">
+            <img src="images/banner-sharara-01.jpg.jpeg" alt="Sharara">
+          </div>
         </div>
+
+        <button class="slide-btn left" id="slideLeft">❮</button>
+        <button class="slide-btn right" id="slideRight">❯</button>
       </div>
+    </section>
 
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
-        <div class="price">From ₹800</div>
-        <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF">Shop</a>
+    <!-- ABOUT -->
+    <section id="about">
+      <h3>About TANA Fashions</h3>
+      <p>
+        We work directly with manufacturers to deliver premium traditional wear at genuine prices,
+        blending heritage with modern elegance.
+      </p>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <h3>Featured Categories</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><img src="images/saree-02.jpeg"></div>
+          <strong>Sarees</strong>
+          <div class="price">From ₹800</div>
+        </article>
       </div>
-    </article>
-<!-- Dress Materials -->
-<article class="card">
-  <div class="thumb"><img src="images/dressmaterials-01.jpeg"></div>
+    </section>
 
-  <div>
-    <strong>Dress Materials</strong>
-    <div class="cat">Semi-stitched & Unstitched</div>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h3>Contact & Orders</h3>
+      <a class="btn btn-primary"
+        href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF">Join WhatsApp</a>
+    </section>
 
-    <!-- Subcategory Buttons -->
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="unstitched-dressmaterials.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Unstitched</a>
+  </div>
 
-      <a href="semistitched-dressmaterials.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Semi-Stitched</a>
+  <footer>
+    <div class="wrap">
+      © <strong>TANA Fashions</strong> — Tradition & modernity handwoven together.
     </div>
-  </div>
-
-  <div style="display:flex;justify-content:space-between;margin-top:8px;">
-    <div class="price">From ₹999</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-
-    <!-- Bollywood -->
-<article class="card">
-  <div class="thumb">
-    <img src="images/bollywood-01.jpg">
-  </div>
-
-  <div>
-      <strong>Bollywood Style</strong>
-      <div class="cat">Designer heavy & lightweight outfits</div>
-
-      <!-- Subcategory Buttons -->
-      <div style="margin-top:8px; display:flex; gap:8px;">
-        <a href="bollywood-heavy.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Heavy</a>
-        <a href="bollywood-light.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Light</a>
-      </div>
-  </div>
-
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
-    <div class="price">From ₹999</div>
-    <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF">Shop</a>
-  </div>
-</article>
-
-<!-- CHUDIDAARS -->
-<article class="card">
-  <div class="thumb"><img src="images/chudidaars-01.jpg"></div>
-
-  <div>
-      <strong>Chudidaars</strong>
-      <div class="cat">Elegant & Comfortable</div>
-
-      <!-- Subcategory Buttons -->
-      <div style="margin-top:8px; display:flex; gap:8px;">
-        <a href="chudidaars-daily.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">
-          Dailywear
-        </a>
-
-        <a href="chudidaars-party.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">
-          Partywear
-        </a>
-      </div>
-  </div>
-
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
-    <div class="price">From ₹899</div>
-    <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF">Shop</a>
-  </div>
-</article>
-
-    <!-- Men's Wear -->
-<article class="card">
-  <div class="thumb"><img src="images/menswear-01.jpg"></div>
-
-  <div>
-    <strong>Men’s Wear</strong>
-    <div class="cat">Trendy & Ethnic</div>
-
-    <!-- Subcategory Buttons -->
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="mens-traditional.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Traditional</a>
-
-      <a href="mens-casual.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Casual Wear</a>
-    </div>
-  </div>
-
-  <div style="display:flex;justify-content:space-between;margin-top:8px;">
-    <div class="price">From ₹1,199</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-    <!-- Kids Wear -->
-<article class="card">
-  <div class="thumb"><img src="images/kidswear-01.jpg"></div>
-
-  <div>
-    <strong>Kids Wear</strong>
-    <div class="cat">Cute & Comfortable</div>
-
-    <!-- Subcategory Buttons -->
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="fancy-kidswear.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Fancy</a>
-
-      <a href="traditional-kidswear.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Traditional</a>
-    </div>
-  </div>
-
-  <div style="display:flex;justify-content:space-between;margin-top:8px;">
-    <div class="price">From ₹799</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-
-    <!-- Night Wear -->
-<article class="card">
-  <div class="thumb"><img src="images/Nighties-01.jpeg"></div>
-
-  <div>
-    <strong>Night Wear</strong>
-    <div class="cat">Comfortable & breathable</div>
-
-    <!-- Subcategory Buttons -->
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="nighties.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Nighties</a>
-
-      <a href="two-piece-cords.html" class="btn btn-ghost" 
-         style="padding:6px 10px; font-size:13px;">Two-piece Co-ords</a>
-    </div>
-  </div>
-
-  <div style="display:flex;justify-content:space-between;margin-top:8px;">
-    <div class="price">From ₹150</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-
-   <!-- Readymade Blouses -->
-<article class="card">
-  <div class="thumb"><img src="images/blouse-01.jpeg"></div>
-
-  <div>
-    <strong>Readymade Blouses</strong>
-    <div class="cat">Hand-painted & elegant designs</div>
-
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="blouse-printed.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Printed</a>
-      <a href="blouse-embroidery.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Embroidery</a>
-    </div>
-  </div>
-
-  <div style="display:flex; justify-content:space-between; margin-top:8px;">
-    <div class="price">From ₹700</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-    <!-- Leggings -->
-<article class="card">
-  <div class="thumb"><img src="images/leggings-01.jpeg"></div>
-
-  <div>
-    <strong>Leggings</strong>
-    <div class="cat">Comfortable & durable</div>
-
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="leggings-plain.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Plain</a>
-      <a href="leggings-printed.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Printed</a>
-    </div>
-  </div>
-
-  <div style="display:flex; justify-content:space-between; margin-top:8px;">
-    <div class="price">From ₹300</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-
-    <!-- Lehengas -->
-<article class="card">
-  <div class="thumb"><img src="images/lehenga-01.jpeg"></div>
-
-  <div>
-    <strong>Lehengas</strong>
-    <div class="cat">Kanjivaram & Designer styles</div>
-
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="lehenga-traditional.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Traditional</a>
-      <a href="lehenga-designer.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Designer</a>
-    </div>
-  </div>
-
-  <div style="display:flex; justify-content:space-between; margin-top:8px;">
-    <div class="price">From ₹1,000</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-
-    <!-- Long Frocks -->
-<article class="card">
-  <div class="thumb"><img src="images/Long Frocks-01.jpeg"></div>
-
-  <div>
-    <strong>Long Frocks</strong>
-    <div class="cat">Festive & casual frocks</div>
-
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="longfrock-party.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Party Wear</a>
-      <a href="longfrock-daily.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Daily Wear</a>
-    </div>
-  </div>
-
-  <div style="display:flex; justify-content:space-between; margin-top:8px;">
-    <div class="price">From ₹700</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-
-   <!-- Tops -->
-<article class="card">
-  <div class="thumb"><img src="images/Tops-01.jpeg"></div>
-
-  <div>
-    <strong>Tops</strong>
-    <div class="cat">Office & daily wear tops</div>
-
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="tops-cotton.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Cotton</a>
-      <a href="tops-synthetic.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Synthetic</a>
-    </div>
-  </div>
-
-  <div style="display:flex; justify-content:space-between; margin-top:8px;">
-    <div class="price">From ₹500</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-    <!-- Readymade Sarees -->
-<article class="card">
-  <div class="thumb"><img src="images/readymade-sarees-01.jpeg"></div>
-
-  <div>
-    <strong>Readymade Sarees</strong>
-    <div class="cat">Easy-to-wear, elegant stitched sarees</div>
-
-    <!-- Subcategories -->
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="readymade-sarees-fancy.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Fancy</a>
-      <a href="readymade-sarees-regular.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Regular</a>
-    </div>
-  </div>
-
-  <div style="display:flex; justify-content:space-between; margin-top:8px;">
-    <div class="price">From ₹1,499</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-
-<!-- Couple Sets -->
-<article class="card">
-  <div class="thumb"><img src="images/couple-sets-01.jpeg"></div>
-
-  <div>
-    <strong>Couple Sets</strong>
-    <div class="cat">Matching outfits for couples</div>
-
-    <!-- Subcategories -->
-    <div style="margin-top:8px; display:flex; gap:8px;">
-      <a href="couple-traditional.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Traditional</a>
-      <a href="couple-western.html" class="btn btn-ghost" style="padding:6px 10px; font-size:13px;">Western</a>
-    </div>
-  </div>
-
-  <div style="display:flex; justify-content:space-between; margin-top:8px;">
-    <div class="price">From ₹1,999</div>
-    <a class="btn btn-primary" href="#">Shop</a>
-  </div>
-</article>
-<!-- Custom Design -->
-<article class="card">
-  <div class="thumb">
-    <img src="images/custom-design.jpg" alt="Custom Design">
-  </div>
-
-  <div>
-    <strong>Custom Design</strong>
-    <div class="cat">
-      Design your own saree, blouse, lehenga or dress
-    </div>
-  </div>
-
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
-    <div class="price">Made to Order</div>
-    <a class="btn btn-primary" href="custom-design.html">
-      Customize
-    </a>
-  </div>
-</article>
-
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h3>Contact & Orders</h3>
-    <p style="color:var(--muted);max-width:800px;">
-      For orders, join our WhatsApp group or message directly.  
-      We respond quickly between <strong>10:00–20:00</strong>.
-    </p>
-
-    <a class="btn btn-primary" href="https://chat.whatsapp.com/LAzM0SZTWBp76Q7z10DRkF">Join on WhatsApp</a>
-  </section>
-
-</div>
-
-<footer>
-  <div class="wrap" style="padding:0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
-    <div>© <strong>TANA Fashions</strong> — Tradition & modernity handwoven together.</div>
-    <div>Made with care • For orders, use WhatsApp</div>
-  </div>
-</footer>
-
-<script>
-let currentSlide = 0;
-const slider = document.getElementById("bannerSlider");
-const slides = document.querySelectorAll(".banner-slide");
-const totalSlides = slides.length;
-
-function updateSlide() {
-  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-
-// Manual Left
-document.getElementById("slideLeft").onclick = () => {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  updateSlide();
-};
-
-// Manual Right
-document.getElementById("slideRight").onclick = () => {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  updateSlide();
-};
-
-// Auto Slide every 5 seconds
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  updateSlide();
-}, 5000);
-</script>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    let currentSlide = 0;
+    const slider = document.getElementById("bannerSlider");
+    const slides = document.querySelectorAll(".banner-slide");
+
+    document.getElementById("slideLeft").onclick = () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    };
+
+    document.getElementById("slideRight").onclick = () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    };
+  </script>
 
 </body>
 </html>
