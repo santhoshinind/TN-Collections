@@ -1,49 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://tanafashions.com/</loc><priority>1.0</priority></url>
+<url>
+<loc>https://tanafashions.com/</loc>
+<priority>1.0</priority>
+</url>
 
-  <url><loc>https://tanafashions.com/custom-design.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/silk-sarees.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/cotton-sarees.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/readymade-sarees-fancy.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/readymade-sarees-regular.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/unstitched-dressmaterials.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/semistitched-dressmaterials.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/bollywood-heavy.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/bollywood-light.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/chudidaars-daily.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/chudidaars-party.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/mens-traditional.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/mens-casual.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/fancy-kidswear.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/traditional-kidswear.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/nighties.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/two-piece-cords.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/blouse-printed.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/blouse-embroidery.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/leggings-plain.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/leggings-printed.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/lehenga-traditional.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/lehenga-designer.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/longfrock-party.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/longfrock-daily.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/tops-cotton.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/tops-synthetic.html</loc><priority>0.9</priority></url>
-
-  <url><loc>https://tanafashions.com/couple-traditional.html</loc><priority>0.9</priority></url>
-  <url><loc>https://tanafashions.com/couple-western.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/custom-design.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/silk-sarees.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/cotton-sarees.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/readymade-sarees-fancy.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/readymade-sarees-regular.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/unstitched-dressmaterials.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/semistitched-dressmaterials.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/bollywood-heavy.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/bollywood-light.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/chudidaars-daily.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/chudidaars-party.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/mens-traditional.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/mens-casual.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/fancy-kidswear.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/traditional-kidswear.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/nighties.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/two-piece-cords.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/blouse-printed.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/blouse-embroidery.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/leggings-plain.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/leggings-printed.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/lehenga-traditional.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/lehenga-designer.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/longfrock-party.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/longfrock-daily.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/tops-cotton.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/tops-synthetic.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/couple-traditional.html</loc><priority>0.9</priority></url>
+<url><loc>https://tanafashions.com/couple-western.html</loc><priority>0.9</priority></url>
 
 </urlset>
