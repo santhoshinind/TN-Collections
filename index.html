@@ -654,25 +654,36 @@
   </footer>
 
   <!-- SCRIPTS -->
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("active");
-    }
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
 
-    let currentSlide = 0;
-    const slider = document.getElementById("bannerSlider");
-    const slides = document.querySelectorAll(".banner-slide");
+  let currentSlide = 0;
+  const slider = document.getElementById("bannerSlider");
+  const slides = document.querySelectorAll(".banner-slide");
 
-    document.getElementById("slideLeft").onclick = () => {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-    };
+  function showSlide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-    document.getElementById("slideRight").onclick = () => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-    };
-  </script>
+  // LEFT BUTTON
+  document.getElementById("slideLeft").onclick = () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  };
 
+  // RIGHT BUTTON
+  document.getElementById("slideRight").onclick = () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  };
+
+  // AUTO SLIDE
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 3000); // changes every 3 seconds
+</script>
 </body>
 </html>
